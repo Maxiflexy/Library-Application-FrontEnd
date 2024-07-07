@@ -67,7 +67,9 @@ export const Carousel = () => {
 
       {/* Mobile */}
       <div className="d-lg-none mt-3">
-        <ReturnBook />
+        <div className="row d-flex justify-content-center align-items-center">
+          <ReturnBook />
+        </div>
       </div>
 
       <div className="homepage-carousel-title mt-3">
