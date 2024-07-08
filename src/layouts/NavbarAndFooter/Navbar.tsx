@@ -1,3 +1,5 @@
+import { NavLink } from "react-router-dom";
+
 /* eslint-disable jsx-a11y/anchor-is-valid */
 export const Navbar = () => {
   return (
@@ -18,14 +20,14 @@ export const Navbar = () => {
         <div className="collapse navbar-collapse" id="navbarNavDropdown">
           <ul className="navbar-nav">
             <li className="nav-item">
-              <a className="nav-link" href="#">
+              <NavLink className="nav-link" to="/home">
                 Home
-              </a>
+              </NavLink>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">
+              <NavLink className="nav-link" to="/search">
                 Search Books
-              </a>
+              </NavLink>
             </li>
           </ul>
 
