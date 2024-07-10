@@ -45,7 +45,7 @@ export const Navbar = () => {
             {!authState.isAuthenticated ? (
               <li className="nav-item m-1">
                 <Link type="button" className="btn btn-outline-light" to="/login">
-                  SIgn-in
+                  Sign-in
                 </Link>
               </li>
             ) : (
@@ -53,7 +53,7 @@ export const Navbar = () => {
                 <button
                   className="btn btn-outline-light"
                   onClick={handleLogout}
-                ></button>
+                >Logout</button>
               </li>
             )}
           </ul>
