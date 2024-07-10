@@ -1,4 +1,5 @@
 import { NavLink } from "react-router-dom";
+import { useOktaAuth } from "@okta/okta-react";
 
 /* eslint-disable jsx-a11y/anchor-is-valid */
 export const Navbar = () => {
