@@ -3,7 +3,7 @@ import OktaSignIn from "@okta/okta-signin-widget";
 import "@okta/okta-signin-widget/dist/css/okta-sign-in.min.css";
 import { oktaConfig } from "../lib/oktaConfig";
 
-const OktaSigninWidget = ({ onSuccess, onError }) => {
+const OktaSignInWidget = ({ onSuccess, onError }) => {
   const widgetRef = useRef();
 
   useEffect(() => {
@@ -15,7 +15,7 @@ const OktaSigninWidget = ({ onSuccess, onError }) => {
 
     widget
       .showSignInToGetTokens({
-        el: widget.current,
+        el: widgetRef.current,
       })
       .then(onSuccess)
       .catch(onError);
@@ -30,4 +30,4 @@ const OktaSigninWidget = ({ onSuccess, onError }) => {
   );
 };
 
-export default OktaSigninWidget;
+export default OktaSignInWidget;
