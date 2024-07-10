@@ -13,7 +13,7 @@ export const ExploreTopBooks = () => {
             className="btn main-color btn-lg text-white"
             to="/search"
           >
-            Explore top bppks
+            Explore top books
           </Link>
         </div>
       </div>
