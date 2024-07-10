@@ -1,8 +1,19 @@
 import { NavLink } from "react-router-dom";
 import { useOktaAuth } from "@okta/okta-react";
+import { SpinnerLoading } from "../utils/SpinnerLoading";
 
 /* eslint-disable jsx-a11y/anchor-is-valid */
 export const Navbar = () => {
+
+  const {oktaAuth, authState} = useOktaAuth();
+
+  if(!authState){
+    return <SpinnerLoading />
+  }
+
+  
+
+
   return (
     <nav className="navbar navbar-expand-lg navbar-dark main-color py-3">
       <div className="container-fluid">
