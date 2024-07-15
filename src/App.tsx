@@ -49,10 +49,7 @@ export const App = () => {
             <Route path="/checkout/:bookId">
               <BookCheckoutPage />
             </Route>
-            <Route
-              path="/login"
-              render={() => <LoginWidget config={oktaConfig} />}
-            />
+            <Route path="/login" render={() => <LoginWidget config={oktaConfig} />}/>
             <Route path="/login/callback" component={LoginCallback} />
           </Switch>
         </div>
