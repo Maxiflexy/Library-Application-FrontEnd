@@ -5,7 +5,6 @@ import { Pagination } from "../../utils/Pagination";
 import { ChangeQuantityOfBook } from "./ChangeQuantityBook";
 
 export const ChangeQuantityOfBooks = () => {
-
   const [books, setBooks] = useState<BookModel[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [httpError, setHttpError] = useState(null);
@@ -19,7 +18,7 @@ export const ChangeQuantityOfBooks = () => {
   useEffect(() => {
     const fetchBooks = async () => {
       setIsLoading(true); // Start loading
-      const baseUrl: string = `http://localhost:8080/api/books?page=${
+      const baseUrl: string = `${process.env.REACT_APP_API}/books?page=${
         currentPage - 1
       }&size=${booksPerPage}`;
 

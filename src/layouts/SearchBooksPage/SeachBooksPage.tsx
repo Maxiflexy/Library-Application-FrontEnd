@@ -20,7 +20,7 @@ export const SeachBooksPage = () => {
   useEffect(() => {
     const fetchBooks = async () => {
       setIsLoading(true); // Start loading
-      const baseUrl: string = "http://localhost:8080/api/books";
+      const baseUrl: string = `${process.env.REACT_APP_API}/books`;
 
       let url: string = "";
 
