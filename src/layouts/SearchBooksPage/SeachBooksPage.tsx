@@ -18,7 +18,7 @@ export const SeachBooksPage = () => {
   const [categorySelection, setCategorySelection] = useState("Book category");
 
   useEffect(() => {
-    const fetchBook = async () => {
+    const fetchBooks = async () => {
       setIsLoading(true); // Start loading
       const baseUrl: string = "http://localhost:8080/api/books";
 
@@ -66,7 +66,7 @@ export const SeachBooksPage = () => {
       setIsLoading(false);
     };
 
-    fetchBook().catch((error: any) => {
+    fetchBooks().catch((error: any) => {
       setIsLoading(false);
       setHttpError(error.message);
     });
