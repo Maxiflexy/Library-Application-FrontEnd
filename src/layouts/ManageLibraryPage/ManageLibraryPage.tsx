@@ -63,7 +63,7 @@ export const ManageLibraryPage = () => {
                             <AddNewBook />
                     </div>
                     <div className='tab-pane fade' id='nav-quantity' role='tabpanel' aria-labelledby='nav-quantity-tab'>
-                       {/* {changeQuantityOfBooksClick ? <ChangeQuantityOfBooks/> : <></>} */}
+                       {changeQuantityOfBooksClick ? <> Change Quantity </>: <></>}
                     </div>
                     <div className='tab-pane fade' id='nav-messages' role='tabpanel' aria-labelledby='nav-messages-tab'>
                         {messagesClick ? <AdminMessages/> : <></>}

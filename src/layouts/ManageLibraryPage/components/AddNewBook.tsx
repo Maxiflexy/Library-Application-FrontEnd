@@ -57,7 +57,7 @@ export const AddNewBook = () => {
 
                 const submitNewBookResponse = await fetch(url, requestOptions);
                 if (!submitNewBookResponse.ok) {
-                    throw new Error('Something went wrong!');
+                    throw new Error('Something went wrong here!');
                 }
                 setTitle('');
                 setAuthor('');
@@ -71,6 +71,7 @@ export const AddNewBook = () => {
                 setDisplayWarning(true);
                 setDisplaySuccess(false);
             }
+        
     }
 
     return (

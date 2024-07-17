@@ -19,12 +19,13 @@ export const SeachBooksPage = () => {
 
   useEffect(() => {
     const fetchBook = async () => {
+      setIsLoading(true); // Start loading
       const baseUrl: string = "http://localhost:8080/api/books";
 
       let url: string = "";
 
       if (searchUrl === "") {
-        url = `${baseUrl}?pages=${currentPage - 1}&size=${booksPerPage}`;
+        url = `${baseUrl}?page=${currentPage - 1}&size=${booksPerPage}`;
       } else {
         let searchWithPage = searchUrl.replace(
           "<pageNumber>",
@@ -70,7 +71,7 @@ export const SeachBooksPage = () => {
       setHttpError(error.message);
     });
     window.scrollTo(0, 0);
-  }, [currentPage, searchUrl]);
+  }, [booksPerPage, currentPage, searchUrl]);
 
   if (isLoading) {
     return <SpinnerLoading />;
