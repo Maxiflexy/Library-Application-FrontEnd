@@ -53,6 +53,7 @@ export const Navbar = () => {
               <li className="nav-item">
                 <NavLink className="nav-link" to="/admin">Admin</NavLink>
               </li>
+              
             }
           </ul>
 
